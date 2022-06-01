@@ -1,0 +1,34 @@
+<h2 class="text-align-center">Instructions:</h2>
+
+<h3 class="normal-weight-font text-align-center">1. Select who starts the game:</h3>
+<div class="flex-row-justify-center padding06">
+  <h3
+    [ngClass]="
+      userChoice === 'X'
+        ? 'normal-weight-font text-align-center btn-active'
+        : 'normal-weight-font text-align-center btn'
+    "
+    (click)="onUserSelect('X')"
+  >
+    X
+  </h3>
+  <h3
+    [ngClass]="
+      userChoice === 'O'
+        ? 'normal-weight-font text-align-center btn-active'
+        : 'normal-weight-font text-align-center btn'
+    "
+    (click)="onUserSelect('O')"
+  >
+    O
+  </h3>
+</div>
+<h3 class="normal-weight-font text-align-center">2. Click on the desired cell.</h3>
+<h3 class="normal-weight-font text-align-center">
+  3. The next player must choose a new cell to continue the game.
+</h3>
+<br />
+<h3 class="normal-weight-font text-align-center">
+  Once a player completes three matching cells diagonally, horizontally, or
+  vertically, they will be the winner.
+</h3>

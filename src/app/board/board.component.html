@@ -1,0 +1,16 @@
+<div class="board-container">
+  <div class="row-container" *ngFor="let row of board; index as rowIndex">
+    <span
+      [ngClass]="
+        rowIndex.toString() + cellIndex.toString() === winningCoordinates[0] ||
+        rowIndex.toString() + cellIndex.toString() === winningCoordinates[1] ||
+        rowIndex.toString() + cellIndex.toString() === winningCoordinates[2]
+          ? 'cell cell-text-red'
+          : 'cell cell-text-black'
+      "
+      *ngFor="let cell of row; index as cellIndex"
+      (click)="cell === '' && onCellClicked(rowIndex, cellIndex)"
+      >{{ cell }}</span
+    >
+  </div>
+</div>

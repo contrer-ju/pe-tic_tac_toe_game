@@ -1,0 +1,15 @@
+<div class="messages-container">
+  <h2 *ngIf="userChoice === '' && winner === '' && counterMovements < 9">
+    Please select a player to start the game.
+  </h2>
+
+  <h2 *ngIf="userChoice !== '' && winner === '' && counterMovements < 9">
+    It is player {{ userChoice }}'s turn to choose a cell.
+  </h2>
+
+  <h2 *ngIf="counterMovements > 8 && winner === ''">
+    There was no winner, please restart the game.
+  </h2>
+
+  <h2 *ngIf="winner !== ''">Player {{ winner }} is the winner.</h2>
+</div>
